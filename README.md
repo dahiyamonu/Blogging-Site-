@@ -21,6 +21,7 @@ A simple yet feature-rich blogging platform built using Django. This project all
 ## Installation
 
 ### Prerequisites
+
 - Python 3.6+
 - pip (Python package installer)
 
@@ -33,26 +34,26 @@ A simple yet feature-rich blogging platform built using Django. This project all
 
 2. Create a virtual environment:
 
-  python -m venv env
-  source env/bin/activate  # On Windows use: env\Scripts\activate
+   python -m venv env
+   source env/bin/activate  # On Windows use: env\Scripts\activate
 
-3. Install dependencies:
+4. Install dependencies:
 
    pip install -r requirements.txt
 
-4. Run database migrations:
+5. Run database migrations:
 
    python manage.py migrate
 
-5. Create a superuser to access the admin panel:
+6. Create a superuser to access the admin panel:
 
     python manage.py createsuperuser
 
-6. Run the development server:
+7. Run the development server:
 
     python manage.py runserver
 
-7. Access the site by navigating to http://127.0.0.1:8000/ in your browser.
+8. Access the site by navigating to http://127.0.0.1:8000/ in your browser.
   
 **Usage**
   * Go to the home page to view recent blog posts.
