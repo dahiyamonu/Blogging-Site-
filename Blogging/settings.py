@@ -48,6 +48,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    'blog.middleware.SessionStorageMiddleware',
+    # 'blog.middleware.LogRequestsMiddleware',
 ]
 
 ROOT_URLCONF = 'Blogging.urls'
@@ -55,7 +58,7 @@ ROOT_URLCONF = 'Blogging.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': [BASE_DIR, 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -135,3 +138,9 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'your-email@gmail.com'
 EMAIL_HOST_PASSWORD = 'your-email-password'
 ADMIN_EMAIL = 'admin-email@gmail.com'
+
+
+SESSION_ENGINE = 'django.contrib.sessions.backends.db'  # Default: Database-backed sessions
+SESSION_COOKIE_NAME = 'sessionid'  # Default: Session cookie name
+SESSION_EXPIRE_AT_BROWSER_CLOSE = False  # Session persists after browser closes
+SESSION_COOKIE_AGE = 1209600  # (2 weeks) Default: Time in seconds for session expiry

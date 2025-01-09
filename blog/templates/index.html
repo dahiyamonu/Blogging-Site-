@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blogging Site</title>    
+    <title>{% block title %}Blogging Site{% endblock %}e</title>    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     
     {% comment %} navbar css {% endcomment %}
@@ -81,7 +81,7 @@
         </div>
       </nav>
 
-
+        
     <div class="container mt-5">
         <h1>Today's New Blogs</h1>
         <div class="row">
